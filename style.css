@@ -1,0 +1,201 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #000;
+    font-family: 'Helvetica Neue', sans-serif;
+    transition: background-color 0.3s;
+}
+
+body.light {
+    background-color: #f2f2f7;
+}
+
+.theme-switch {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 60px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.theme-switch input {
+    display: none;
+}
+
+.switch-slider {
+    width: 100%;
+    height: 100%;
+    background: #333;
+    border-radius: 30px;
+    position: relative;
+    display: block;
+}
+
+.switch-slider .icon {
+    display: none;
+}
+
+.switch-knob {
+    width: 26px;
+    height: 26px;
+    background: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.switch-knob .knob-sun {
+    display: none;
+    color: #FFD700;
+}
+
+.switch-knob .knob-moon {
+    display: block;
+    color: #F0F0F0;
+}
+
+.theme-switch input:checked + .switch-slider .switch-knob {
+    transform: translateX(30px);
+}
+
+.theme-switch input:checked + .switch-slider .switch-knob .knob-sun {
+    display: block;
+}
+
+.theme-switch input:checked + .switch-slider .switch-knob .knob-moon {
+    display: none;
+}
+
+body:not(.light) .switch-knob .knob-sun {
+    display: none;
+}
+
+body:not(.light) .switch-knob .knob-moon {
+    display: block;
+}
+
+.card {
+    background: #111;
+    padding: 25px;
+    border-radius: 30px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8);
+    transition: background-color 0.3s;
+}
+
+body.light .card {
+    background: #ffffff;
+}
+
+.calculator {
+    width: 320px;
+    background-color: #000;
+    border-radius: 20px;
+    padding: 20px;
+    transition: background-color 0.3s;
+}
+
+body.light .calculator {
+    background-color: #f2f2f7;
+}
+
+.display {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+
+.display-value {
+    background-color: #1c1c1e;
+    color: #fff;
+    font-size: 48px;
+    padding: 15px;
+    border-radius: 10px;
+    min-width: 280px;
+    max-width: 280px;
+    height: 70px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    overflow-x: auto;
+    white-space: nowrap;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.light .display-value {
+    background-color: #e5e5ea;
+    color: #000;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    height: 70px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+button:hover {
+    background-color: #555;
+}
+
+.operator,
+.equals {
+    background-color: #ff9500;
+}
+
+.operator:hover,
+.equals:hover {
+    background-color: #e68900;
+}
+
+.clear {
+    background-color: #a6a6a6;
+    color: #000;
+}
+
+.clear:hover {
+    background-color: #c8c8c8;
+}
+
+.zero {
+    grid-column: span 2;
+    border-radius: 35px;
+}
+
+body.light button {
+    background-color: #d1d1d6;
+    color: #000;
+}
+
+body.light .operator,
+body.light .equals {
+    background-color: #ff9500;
+    color: #fff;
+}
+
+body.light .clear {
+    background-color: #c7c7cc;
+}

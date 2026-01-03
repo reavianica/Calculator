@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+
+    <!-- Emoji favicon (🖩) -->
+    <link rel="icon" href="data:image/svg+xml,
+    <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>
+      <text y='0.9em' font-size='90'>🖩</text>
+    </svg>">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="card">
+        <div class="calculator">
+
+            <label class="theme-switch" for="themeToggle">
+                <input type="checkbox" id="themeToggle" aria-label="Toggle theme">
+                <span class="switch-slider" aria-hidden="true">
+                    <span class="icon sun"><i class="fas fa-sun"></i></span>
+                    <span class="icon moon"><i class="fas fa-moon"></i></span>
+                    <span class="switch-knob" aria-hidden="true">
+                        <i class="fas fa-sun knob-sun"></i>
+                        <i class="fas fa-moon knob-moon"></i>
+                    </span>
+                </span>
+            </label>
+
+            <div class="display">
+                <span id="displayValue" class="display-value">0</span>
+            </div>
+
+            <div class="buttons">
+                <button class="clear" data-fn="clear">AC</button>
+                <button class="clear" data-fn="toggle-sign">±</button>
+                <button class="clear" data-fn="percent">%</button>
+                <button class="operator" data-op="/">÷</button>
+
+                <button data-val="7">7</button>
+                <button data-val="8">8</button>
+                <button data-val="9">9</button>
+                <button class="operator" data-op="*">×</button>
+
+                <button data-val="4">4</button>
+                <button data-val="5">5</button>
+                <button data-val="6">6</button>
+                <button class="operator" data-op="-">−</button>
+
+                <button data-val="1">1</button>
+                <button data-val="2">2</button>
+                <button data-val="3">3</button>
+                <button class="operator" data-op="+">+</button>
+
+                <button class="zero" data-val="0">0</button>
+                <button data-val=".">.</button>
+                <button class="equals" data-eq="=">=</button>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
